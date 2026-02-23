@@ -6,49 +6,76 @@ function getColorClass(num) {
   return 'range-40';
 }
 
+var drawHistory = [];
+
 function draw() {
-  const ballsContainer = document.getElementById('balls');
+  var ballsContainer = document.getElementById('balls');
   ballsContainer.innerHTML = '';
 
-  const numbers = [];
+  var numbers = [];
   while (numbers.length < 7) {
-    const n = Math.floor(Math.random() * 45) + 1;
-    if (!numbers.includes(n)) numbers.push(n);
+    var n = Math.floor(Math.random() * 45) + 1;
+    if (numbers.indexOf(n) === -1) numbers.push(n);
   }
 
-  const main = numbers.slice(0, 6).sort((a, b) => a - b);
-  const bonus = numbers[6];
+  var main = numbers.slice(0, 6).sort(function(a, b) { return a - b; });
+  var bonus = numbers[6];
 
-  main.forEach((num, i) => {
-    setTimeout(() => {
-      const ball = document.createElement('div');
-      ball.className = `ball ${getColorClass(num)}`;
+  main.forEach(function(num, i) {
+    setTimeout(function() {
+      var ball = document.createElement('div');
+      ball.className = 'ball ' + getColorClass(num);
       ball.textContent = num;
       ballsContainer.appendChild(ball);
     }, i * 200);
   });
 
-  setTimeout(() => {
-    const ball = document.createElement('div');
-    ball.className = `ball bonus ${getColorClass(bonus)}`;
+  setTimeout(function() {
+    var ball = document.createElement('div');
+    ball.className = 'ball bonus ' + getColorClass(bonus);
     ball.textContent = bonus;
     ballsContainer.appendChild(ball);
   }, 6 * 200);
+
+  drawHistory.unshift({ main: main, bonus: bonus });
+  if (drawHistory.length > 5) drawHistory.pop();
+
+  setTimeout(function() {
+    renderHistory();
+  }, 7 * 200);
+}
+
+function renderHistory() {
+  var container = document.getElementById('history');
+  if (!container || drawHistory.length < 2) return;
+
+  var html = '<p class="history-title">최근 추첨 이력</p>';
+  for (var i = 1; i < drawHistory.length; i++) {
+    var entry = drawHistory[i];
+    html += '<div class="history-item">';
+    for (var j = 0; j < entry.main.length; j++) {
+      html += '<div class="history-ball ' + getColorClass(entry.main[j]) + '">' + entry.main[j] + '</div>';
+    }
+    html += '<div class="history-ball bonus ' + getColorClass(entry.bonus) + '">' + entry.bonus + '</div>';
+    html += '</div>';
+  }
+  container.innerHTML = html;
 }
 
 function toggleTheme() {
-  const body = document.body;
-  const btn = document.getElementById('themeBtn');
+  var body = document.body;
+  var btn = document.getElementById('themeBtn');
   body.classList.toggle('light');
-  const isLight = body.classList.contains('light');
+  var isLight = body.classList.contains('light');
   btn.textContent = isLight ? '🌙' : '☀️';
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 }
 
 (function initTheme() {
-  const saved = localStorage.getItem('theme');
+  var saved = localStorage.getItem('theme');
   if (saved === 'light') {
     document.body.classList.add('light');
-    document.getElementById('themeBtn').textContent = '🌙';
+    var btn = document.getElementById('themeBtn');
+    if (btn) btn.textContent = '🌙';
   }
 })();

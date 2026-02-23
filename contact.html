@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>제휴 문의 - 로또메이트</title>
+  <meta name="description" content="로또메이트에 제휴, 광고, 기타 문의사항이 있으시면 언제든 연락해주세요.">
+  <meta name="google-adsense-account" content="ca-pub-6384728543319981">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6384728543319981"
+     crossorigin="anonymous"></script>
+  <link href='/style.css' rel='stylesheet'>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo">로또메이트</a>
+      <nav class="nav">
+        <a href="/" class="nav-link">번호 추첨</a>
+        <a href="/guide.html" class="nav-link">로또 가이드</a>
+        <a href="/about.html" class="nav-link">소개</a>
+        <a href="/contact.html" class="nav-link active">문의</a>
+      </nav>
+      <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <h1>제휴 문의</h1>
+      <p class="hero-desc">광고, 제휴, 콘텐츠 협업 등 문의사항이 있으시면 아래 양식을 통해 연락해주세요.</p>
+    </section>
+
+    <section class="section content-section">
+      <form action="https://formspree.io/f/xykdbpdr" method="POST" class="contact-form">
+        <label class="form-label" for="name">이름 / 회사명</label>
+        <input type="text" id="name" name="name" placeholder="홍길동 / ABC 주식회사" required>
+        <label class="form-label" for="email">이메일</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        <label class="form-label" for="subject">문의 유형</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>선택해주세요</option>
+          <option value="광고 문의">광고 문의</option>
+          <option value="제휴 제안">제휴 제안</option>
+          <option value="콘텐츠 협업">콘텐츠 협업</option>
+          <option value="버그 신고">버그 신고</option>
+          <option value="기타">기타</option>
+        </select>
+        <label class="form-label" for="message">문의 내용</label>
+        <textarea id="message" name="message" placeholder="문의 내용을 상세히 입력해주세요." rows="6" required></textarea>
+        <button type="submit" class="submit-btn">문의 보내기</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a>
+        <a href="/about.html">소개</a>
+        <a href="/contact.html">제휴 문의</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 로또메이트. All rights reserved.</p>
+      <p class="footer-disclaimer">본 사이트는 로또 번호를 랜덤으로 생성하는 도구를 제공하며, 당첨을 보장하지 않습니다.</p>
+    </div>
+  </footer>
+  <script defer type="text/javascript" src="/main.js"></script>
+</body>
+</html>

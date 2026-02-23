@@ -3,19 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>로또 번호 추첨기</title>
+  <title>로또 번호 추첨기 - 무료 로또 번호 생성기 | 로또메이트</title>
+  <meta name="description" content="무료 로또 번호 추첨기로 이번 주 행운의 번호를 뽑아보세요. 로또 당첨 확률, 번호 분석 가이드, 구매 팁까지 로또에 관한 모든 정보를 제공합니다.">
+  <meta name="keywords" content="로또, 로또 번호 추첨기, 로또 번호 생성기, 로또 당첨 확률, 로또 구매 방법">
+  <meta name="author" content="로또메이트">
   <meta name="google-adsense-account" content="ca-pub-6384728543319981">
+  <link rel="canonical" href="https://lottomate.kr/">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6384728543319981"
      crossorigin="anonymous"></script>
   <link href='/style.css' rel='stylesheet'>
 </head>
 <body>
-  <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">☀️</button>
-  <div class="container">
-    <h1>로또 번호 추첨기</h1>
-    <div id="balls" class="balls"></div>
-    <button id="drawBtn" onclick="draw()">추첨하기</button>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo">로또메이트</a>
+      <nav class="nav">
+        <a href="/" class="nav-link active">번호 추첨</a>
+        <a href="/guide.html" class="nav-link">로또 가이드</a>
+        <a href="/about.html" class="nav-link">소개</a>
+        <a href="/contact.html" class="nav-link">문의</a>
+      </nav>
+      <button id="themeBtn" class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    </div>
+  </header>
 
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>무료 로또 번호 추첨기</h1>
+      <p class="hero-desc">버튼 하나로 이번 주 행운의 번호를 뽑아보세요. 1~45 중 6개의 번호와 보너스 번호 1개를 랜덤으로 생성합니다.</p>
+    </section>
+
+    <!-- Draw Section -->
+    <section class="section draw-section">
+      <div id="balls" class="balls"></div>
+      <button id="drawBtn" onclick="draw()">추첨하기</button>
+      <div id="history" class="history"></div>
+    </section>
+
+    <!-- Ad -->
     <div class="ad-banner">
       <ins class="adsbygoogle"
            style="display:block"
@@ -26,16 +53,63 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div class="contact-section">
-      <h2>제휴 문의</h2>
-      <form action="https://formspree.io/f/xykdbpdr" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="이름 / 회사명" required>
-        <input type="email" name="email" placeholder="이메일" required>
-        <textarea name="message" placeholder="문의 내용을 입력해주세요" rows="4" required></textarea>
-        <button type="submit" class="submit-btn">문의 보내기</button>
-      </form>
-    </div>
+    <!-- How to use -->
+    <section class="section content-section">
+      <h2>로또 번호 추첨기 사용법</h2>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-icon">1</div>
+          <h3>추첨하기 클릭</h3>
+          <p>페이지 상단의 "추첨하기" 버튼을 누르면 1~45 사이의 숫자 중 중복 없이 6개의 번호와 보너스 번호 1개가 자동으로 생성됩니다.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">2</div>
+          <h3>번호 색상 확인</h3>
+          <p>번호는 범위에 따라 색상으로 구분됩니다. 1~10번은 노랑, 11~20번은 초록, 21~30번은 빨강, 31~40번은 보라, 41~45번은 파랑입니다.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">3</div>
+          <h3>여러 번 추첨</h3>
+          <p>버튼을 여러 번 눌러 다양한 번호 조합을 확인해보세요. 최근 추첨 이력이 아래에 표시되어 비교하기 편리합니다.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Lotto Info Article -->
+    <section class="section content-section">
+      <h2>로또 6/45 완벽 가이드</h2>
+      <article class="article">
+        <h3>로또란 무엇인가요?</h3>
+        <p>로또 6/45는 대한민국에서 가장 인기 있는 복권 게임입니다. 1부터 45까지의 숫자 중 6개를 선택하여 추첨 번호와 일치하면 당첨금을 받는 방식입니다. 매주 토요일 오후 8시 45분에 MBC에서 생방송으로 추첨이 진행됩니다.</p>
+
+        <h3>당첨 등수별 조건</h3>
+        <div class="info-table-wrap">
+          <table class="info-table">
+            <thead>
+              <tr><th>등수</th><th>당첨 조건</th><th>평균 당첨금</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1등</td><td>6개 번호 모두 일치</td><td>약 20억 원 이상</td></tr>
+              <tr><td>2등</td><td>5개 번호 + 보너스 번호 일치</td><td>약 5,000만 원</td></tr>
+              <tr><td>3등</td><td>5개 번호 일치</td><td>약 150만 원</td></tr>
+              <tr><td>4등</td><td>4개 번호 일치</td><td>고정 5만 원</td></tr>
+              <tr><td>5등</td><td>3개 번호 일치</td><td>고정 5,000원</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>당첨 확률은 얼마나 될까요?</h3>
+        <p>로또 1등에 당첨될 확률은 <strong>약 814만 5,060분의 1</strong>입니다. 이는 45개의 숫자 중 6개를 순서 없이 선택하는 조합의 수(₄₅C₆ = 8,145,060)에 해당합니다. 2등 확률은 약 135만분의 1, 3등은 약 3만 5천분의 1, 4등은 약 733분의 1, 5등은 약 45분의 1입니다.</p>
+
+        <h3>로또를 현명하게 구매하는 방법</h3>
+        <p>로또는 전국 로또 판매점에서 1장당 1,000원에 구매할 수 있습니다. 1회에 최대 5게임(5,000원)까지 구매 가능하며, 동행복권 공식 사이트에서 온라인 구매도 가능합니다. 번호를 직접 선택하는 "수동"과 컴퓨터가 랜덤으로 선택하는 "자동" 중 선택할 수 있습니다.</p>
+
+        <h3>당첨금은 어떻게 수령하나요?</h3>
+        <p>5등(5,000원)은 로또 판매점에서 바로 수령 가능합니다. 4등(5만 원)은 농협 은행 지점에서 수령하며, 3등 이상은 농협은행 본점에서 신분증을 지참하고 수령합니다. 당첨금이 3억 원을 초과하면 33%의 세금이 부과되며, 3억 원 이하는 22%가 부과됩니다.</p>
+      </article>
+    </section>
+
+    <!-- Ad -->
     <div class="ad-banner">
       <ins class="adsbygoogle"
            style="display:block"
@@ -46,11 +120,75 @@
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <div class="disqus-section">
+    <!-- Tips Section -->
+    <section class="section content-section">
+      <h2>로또 번호 선택 팁</h2>
+      <article class="article">
+        <h3>1. 고른 번호 분포를 유지하세요</h3>
+        <p>1~45 전체 범위에서 골고루 번호를 선택하는 것이 좋습니다. 한쪽 범위에 치우친 번호보다는 저번호(1~22)와 고번호(23~45)를 균형 있게 섞어보세요. 실제 당첨 번호를 분석해보면 한쪽에만 치우친 경우는 드뭅니다.</p>
+
+        <h3>2. 연속 번호 패턴을 참고하세요</h3>
+        <p>역대 당첨 번호를 보면 6개 번호 중 연속된 번호(예: 7, 8)가 포함되는 경우가 약 60% 이상입니다. 반대로 모두 연속된 번호(1, 2, 3, 4, 5, 6)가 나올 확률은 극히 낮습니다.</p>
+
+        <h3>3. 홀짝 비율을 고려하세요</h3>
+        <p>6개 번호를 모두 홀수 또는 모두 짝수로 선택하는 것은 통계적으로 불리합니다. 홀수 3개 + 짝수 3개, 또는 홀수 4개 + 짝수 2개처럼 적절히 섞는 것이 좋습니다.</p>
+
+        <h3>4. 과거 당첨 번호를 참고만 하세요</h3>
+        <p>로또는 매회 독립적인 확률 게임이므로 과거 번호가 미래에 영향을 주지 않습니다. 다만, 자주 등장하는 번호나 패턴을 참고하면 번호 선택에 도움이 될 수 있습니다.</p>
+
+        <h3>5. 예산을 정하고 즐기세요</h3>
+        <p>로또는 소액으로 꿈을 꾸는 여가 활동입니다. 월 구매 예산을 미리 정하고, 그 범위 내에서 즐기는 것이 현명한 방법입니다. 과도한 구매는 오히려 스트레스를 유발할 수 있습니다.</p>
+      </article>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section content-section">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>이 추첨기로 뽑은 번호가 실제로 당첨될 수 있나요?</summary>
+          <p>네, 이 추첨기는 1~45 사이의 숫자를 완전히 랜덤으로 생성하므로 실제 로또 추첨과 동일한 확률을 가집니다. 다만 로또 자체의 당첨 확률이 매우 낮다는 점은 동일합니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>로또 번호 추첨기의 랜덤 방식은 어떻게 작동하나요?</summary>
+          <p>JavaScript의 Math.random() 함수를 사용하여 의사 난수(pseudo-random number)를 생성합니다. 중복 검사를 통해 6개의 고유한 번호와 1개의 보너스 번호를 추출하며, 메인 번호는 오름차순으로 정렬하여 표시합니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>로또 구매는 어디서 할 수 있나요?</summary>
+          <p>전국 로또 판매점에서 직접 구매하거나, 동행복권 공식 웹사이트(dhlottery.co.kr)에서 온라인으로 구매할 수 있습니다. 온라인 구매 시 예치금 충전 후 이용 가능합니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>로또 당첨금에 세금이 부과되나요?</summary>
+          <p>5만 원 이하(5등)는 비과세입니다. 5만 원 초과 ~ 3억 원 이하는 22%(소득세 20% + 지방소득세 2%), 3억 원 초과분은 33%(소득세 30% + 지방소득세 3%)의 세금이 원천징수됩니다.</p>
+        </details>
+        <details class="faq-item">
+          <summary>당첨금 수령 기한이 있나요?</summary>
+          <p>당첨금은 지급 개시일(추첨일 다음 날)부터 1년 이내에 수령해야 합니다. 기한이 지나면 당첨금은 복권기금으로 귀속됩니다.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Disqus Comments -->
+    <section class="section content-section">
       <h2>댓글</h2>
+      <p class="section-desc">로또 번호 추첨 결과나 당첨 경험을 공유해보세요!</p>
       <div id="disqus_thread"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/privacy.html">개인정보처리방침</a>
+        <a href="/terms.html">이용약관</a>
+        <a href="/about.html">소개</a>
+        <a href="/contact.html">제휴 문의</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 로또메이트. All rights reserved.</p>
+      <p class="footer-disclaimer">본 사이트는 로또 번호를 랜덤으로 생성하는 도구를 제공하며, 당첨을 보장하지 않습니다. 로또 구매는 개인의 판단과 책임 하에 이루어져야 합니다.</p>
     </div>
-  </div>
+  </footer>
 
   <script>
     (function() {
