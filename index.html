@@ -12,6 +12,16 @@
     <h1>로또 번호 추첨기</h1>
     <div id="balls" class="balls"></div>
     <button id="drawBtn" onclick="draw()">추첨하기</button>
+
+    <div class="contact-section">
+      <h2>제휴 문의</h2>
+      <form action="https://formspree.io/f/xykdbpdr" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="이름 / 회사명" required>
+        <input type="email" name="email" placeholder="이메일" required>
+        <textarea name="message" placeholder="문의 내용을 입력해주세요" rows="4" required></textarea>
+        <button type="submit" class="submit-btn">문의 보내기</button>
+      </form>
+    </div>
   </div>
   <script defer type="text/javascript" src="/main.js"></script>
 </body>
