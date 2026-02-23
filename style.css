@@ -11,6 +11,11 @@ body {
   align-items: center;
   background: #1a1a2e;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  background: #f0f0f5;
 }
 
 .container {
@@ -21,6 +26,11 @@ h1 {
   color: #fff;
   font-size: 2rem;
   margin-bottom: 40px;
+  transition: color 0.3s;
+}
+
+body.light h1 {
+  color: #1a1a2e;
 }
 
 .balls {
@@ -60,13 +70,17 @@ h1 {
   font-size: 1.4rem;
 }
 
+body.light .ball.bonus::before {
+  color: #666;
+}
+
 .range-1  { background: #fbc531; }
 .range-10 { background: #4cd137; }
 .range-20 { background: #e84118; }
 .range-30 { background: #9c88ff; }
 .range-40 { background: #00a8ff; }
 
-button {
+button#drawBtn {
   padding: 14px 48px;
   font-size: 1.2rem;
   font-weight: 600;
@@ -79,13 +93,39 @@ button {
   box-shadow: 0 4px 15px rgba(232,65,24,0.4);
 }
 
-button:hover {
+button#drawBtn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(232,65,24,0.6);
 }
 
-button:active {
+button#drawBtn:active {
   transform: translateY(0);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.light .theme-toggle {
+  background: rgba(0,0,0,0.08);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
 }
 
 @keyframes pop {
