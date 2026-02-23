@@ -1,1 +1,95 @@
-/* Add styles here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a2e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.balls {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  min-height: 80px;
+}
+
+.ball {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 0 -4px 6px rgba(0,0,0,0.2), 0 4px 12px rgba(0,0,0,0.3);
+  animation: pop 0.4s ease;
+}
+
+.ball.bonus {
+  margin-left: 20px;
+  position: relative;
+}
+
+.ball.bonus::before {
+  content: '+';
+  position: absolute;
+  left: -20px;
+  color: #aaa;
+  font-size: 1.4rem;
+}
+
+.range-1  { background: #fbc531; }
+.range-10 { background: #4cd137; }
+.range-20 { background: #e84118; }
+.range-30 { background: #9c88ff; }
+.range-40 { background: #00a8ff; }
+
+button {
+  padding: 14px 48px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #e84118, #c23616);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(232,65,24,0.4);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232,65,24,0.6);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@keyframes pop {
+  0%   { transform: scale(0); opacity: 0; }
+  70%  { transform: scale(1.15); }
+  100% { transform: scale(1); opacity: 1; }
+}
